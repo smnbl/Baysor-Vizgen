@@ -1,0 +1,9 @@
+[data]
+min_molecules_per_gene = 50
+min_molecules_per_cell = 30
+
+[segmentation]
+scale = 6.15
+
+[plotting]
+gene_composition_neigborhood = 70
