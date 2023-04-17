@@ -1,6 +1,9 @@
 [data]
 min_molecules_per_gene = 50
 min_molecules_per_cell = 30
+x = "global_x" # Name of the x column in the input data. Default: "x"
+y = "global_y" # Name of the y column in the input data. Default: "y"
+z = "global_z" # Name of the y column in the input data. Default: "z"
 
 [segmentation]
 scale = 6.15

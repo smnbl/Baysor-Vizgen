@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #PBS -l nodes=1:ppn=4
-#PBS -l walltime=10:00:00
+#PBS -l walltime=24:00:00
 #PBS -l mem=64gb
 #PBS -m ae
 #PBS -M simon.bil@ugent.be
