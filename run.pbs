@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-11;rgb:2828/2828/2828#PBS -l nodes=1:ppn=4
+#PBS -l nodes=1:ppn=16
 #PBS -l walltime=24:00:00
-#PBS -l mem=120gb
+#PBS -l mem=64gb
 #PBS -m ae
 #PBS -M simon.bil@ugent.be
 
 cd dp/Vizgen
 
-mkdir output_dapi
+mkdir output_polyt
 
 # disable lazy load as it seems to cause world age issues
 export LazyModules_lazyload=false
 
 # wo plotting as it seems to cause errors?
 # TODO: investigate?
-./baysor run -c ./merfish.toml -o ./output_dapi ./data/subset_transcripts.csv ./data/masks.tiff
+JULIA_NUM_THREADS=16 ./baysor run -c ./merfish.toml -o ./output_polyt ./data/detected_transcripts_10_000.csv ./data/vizgen_Liver_polyT_10_000.tiff
