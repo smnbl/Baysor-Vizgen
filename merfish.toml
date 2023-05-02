@@ -3,11 +3,10 @@ min_molecules_per_gene = 50
 min_molecules_per_cell = 30
 x = "x" # Name of the x column in the input data. Default: "x"
 y = "y" # Name of the y column in the input data. Default: "y"
-exclude_genes = "Blank*" # exclude control genes
 
 [segmentation]
-scale = 54.94 # 6.15 / 0.108
-#n_clusters = 1 # adviced for data with cell compartment structure? TODO: why?
+scale = 50 # ~ expected (smallest?) cell radius
+n_clusters = 15 # adviced for data with cell compartment structure? TODO: why?
 
 [plotting]
 gene_composition_neigborhood = 70
