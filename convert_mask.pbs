@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=1:00:00
+#PBS -l mem=20gb
+#PBS -m ae
+#PBS -M simon.bil@ugent.be
+
+source /data/gent/vo/000/gvo00095/Courses/AHTA/DaMBi_lab/miniconda3/etc/profile.d/conda.sh
+conda activate napari-sparrow
+
+cd dp/Vizgen
+
+./convert_mask.py data/cellpose_polyT/masks.npy data/cellpose_polyT/masks.tiff
+
+
